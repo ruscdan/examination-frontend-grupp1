@@ -93,7 +93,7 @@ body{
 }
 
 @media (max-width: 600px){
- .nav .top, .gallery{
+ .nav .top, .gallery, .go{
         display: flex;
         flex-direction: column;
     }
