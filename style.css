@@ -19,9 +19,10 @@ body{
    
 }
 
-.top{
+.nav .top{
     display:flex;
-    gap: 2rem;
+    gap: 1.5rem;
+ 
 }
 
 .heading{
@@ -29,12 +30,98 @@ body{
     margin: 1rem;
 }
 
-.menu {
+.menu{
     list-style: none;
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 2rem;
+   
+}
 
+.main {
+   display: grid;
+    grid-template-columns: 1fr 3fr;
+    
+
+    grid-template-areas:
+        "about artists"
+        "schedule tickets";
+          gap: 2rem;
+          margin: 3rem;
+}
+
+#about {
+    grid-area: about;
+   
+    
+}
+
+article{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+#artists {
+    grid-area: artists;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.featured{
+    display: flex;
+    justify-content: center;
+}
+
+#schedule{
+    grid-area:schedule ;
+    
+}
+
+#schedule ul li {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 1rem;
+}
+
+
+
+#tickets{
+    grid-area: tickets;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+}
+
+#btn{
+    width: 10rem;
+    height: 3rem;
+    align-self: center;
+
+}
+
+.artist-cards {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+
+
+
+#hero{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem
 }
 
 .menu, .nav a{
@@ -49,17 +136,17 @@ body{
 
 .foo{
     display: grid;
-    grid-template-columns: 1fr  1fr  1fr 1fr  1fr;
-    
+    grid-template-columns: 1fr 2fr 1fr;
     gap: 2rem;
 }
 
-.go{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-}
+          /* main*/
+
+
+
+
+
+
 
 
 .foo a{
@@ -83,6 +170,7 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    flex-wrap: wrap;
     gap: 1rem;
 }
 
@@ -92,9 +180,22 @@ body{
  gap: 1rem;
 }
 
-@media (max-width: 600px){
- .nav .top, .gallery, .go{
-        display: flex;
+@media (max-width: 600px) {
+       .main {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "about"
+            "artists"
+            "schedule"
+            "tickets";
+        margin: 1rem;
+    }
+
+    .nav .top {
+        flex-direction: column;
+    }
+
+    .gallery {
         flex-direction: column;
     }
 }
