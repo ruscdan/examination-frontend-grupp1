@@ -49,9 +49,18 @@ body{
 
 .foo{
     display: grid;
-    grid-template-columns: 1fr  1fr  1fr;
+    grid-template-columns: 1fr  1fr  1fr 1fr  1fr;
+    
     gap: 2rem;
 }
+
+.go{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
 
 .foo a{
     display: flex;
@@ -65,6 +74,9 @@ body{
 .foo a:hover{
     background-color: rgb(132, 136, 136);
     
+}
+.contact{
+    margin: 1rem;
 }
 
 .gallery {
